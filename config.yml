@@ -1,8 +1,5 @@
 ---
 instances:
-- https://rss.shab.fun/
-- https://vercel.getrss2021.xyz/
-- http://getrss2021.xyz:1200/
 - https://rsshub.app/
 - https://rsshub.rssforever.com/
 - https://hub.slarker.me/
@@ -16,6 +13,9 @@ instances:
 - https://rsshub.speednet.icu/
 - https://hub.rss.direct/
 - https://rsshub.umzzz.com/
+- https://rss.shab.fun/
+- https://vercel.getrss2021.xyz/
+- http://getrss2021.xyz:1200/
 routes:
 - title: tk 微博
   path: weibo/user/6827625527
