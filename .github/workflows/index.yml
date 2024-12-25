@@ -1,10 +1,7 @@
 name: proxy_rsshub
 on:
   schedule:
-    - cron: "0 0 */1 * *"
-  push:
-    tags:
-      - "test-*"
+    - cron: "3 */1 * * *"
   workflow_dispatch:
 
 jobs:
