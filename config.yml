@@ -17,6 +17,8 @@ instances:
 - https://vercel.getrss2021.xyz/
 - http://getrss2021.xyz:1200/
 routes:
-- title: tk 微博
+- title: tk 微博小号
   path: weibo/user/6827625527
+- title: tk 微博
+  path: weibo/user/1401527553
 # baseUrl: https://raw.githubusercontent.com/wdssmq/proxy_rsshub/main # The Base Url Of xml folder
