@@ -75,19 +75,21 @@ def for_routes(route_list, host_list):
 
 
 def get_xml(url, name):
-    rlt = False
     xml_file = os.path.join(os.getcwd(), "xml/%s.xml" % name)
     fnLog(url)
     try:
         r = requests.get(url, timeout=5)
         fnLog(r.status_code)
-        if (r.status_code == 200):
-            with open(xml_file, 'w', encoding='utf-8') as f:
-                f.write(r.text)
-            rlt = True
+        if (r.status_code != 200):
+            return False
+        fnLog(t.text[:10])
+        if (not t.text.startswith('<?xml')):
+            return False
+        with open(xml_file, 'w', encoding='utf-8') as f:
+            f.write(r.text)
     except:
         fnLog("err")
-    return rlt
+    return True
 # 抓取内容并写入文件
 
 
