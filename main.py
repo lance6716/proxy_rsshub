@@ -76,8 +76,6 @@ def get_xml(url, name):
 
 
 def main():
-    global _opml, _baseUrl
-    _opml = opml()
     # 配置路径
     _confg_json = os.path.join(os.getcwd(), "config.json")
     _config_yml = os.path.join(os.getcwd(), "config.yml")
@@ -89,17 +87,6 @@ def main():
     # print(_confg_data)
     _routes = _confg_data["routes"]
     _instances = _confg_data["instances"]
-
-    if "baseUrl" in _confg_data:
-        _baseUrl = _confg_data["baseUrl"]
-    try:
-        if(os.environ["GITHUB_REPOSITORY"]):
-            fnBug(os.environ["GITHUB_REPOSITORY"])
-            _baseUrl = "https://raw.githubusercontent.com/%s/main" % os.environ["GITHUB_REPOSITORY"]
-    except:
-        fnLog()
-
-    print("-----")
 
     for_routes(_routes, _instances)
 # main
