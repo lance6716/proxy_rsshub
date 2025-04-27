@@ -87,9 +87,10 @@ def get_xml(url, name):
             return False
         with open(xml_file, 'w', encoding='utf-8') as f:
             f.write(r.text)
+        return True
     except:
         fnLog("err")
-    return True
+    return False
 # 抓取内容并写入文件
 
 
